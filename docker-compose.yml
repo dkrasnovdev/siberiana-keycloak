@@ -1,6 +1,6 @@
 services:
   keycloak_postgres:
-    container_name: postgres_keycloak
+    container_name: keycloak_postgres
     image: postgres:latest
     restart: unless-stopped
     healthcheck:
