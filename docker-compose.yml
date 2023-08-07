@@ -12,7 +12,7 @@ services:
     ports:
       - 5432
     volumes:
-      - data:/var/lib/postgresql/data
+      - keycloak_data:/var/lib/postgresql/data
     networks:
       - siberiana-network
 
@@ -36,7 +36,7 @@ services:
       - keycloak_postgres
 
 volumes:
-  data:
+  keycloak_data:
 
 networks:
   siberiana-network:
