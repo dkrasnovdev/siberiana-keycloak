@@ -1,0 +1,23 @@
+services:
+  keycloak:
+    container_name: keycloak_service
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    restart: unless-stopped
+    environment:
+      KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN:-master}
+      KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD:-changeme}
+    ports:
+      - 10001:8080
+    networks:
+      - siberiana-network
+    volumes:
+      - ./h2/:/opt/keycloak/data/h2/
+
+volumes:
+  h2:
+
+networks:
+  siberiana-network:
+    external: true
