@@ -51,7 +51,7 @@ Before you begin, ensure you have the following installed:
 
 5. Access Keycloak:
 
-   Keycloak admin console will be available at: `http://localhost:8080`. Use the admin credentials specified in your `.env` file to log in.
+   Keycloak admin console will be available at: `http://localhost:10001`. Use the admin credentials specified in your `.env` file to log in.
 
 6. Clean Up:
 

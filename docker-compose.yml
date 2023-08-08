@@ -13,7 +13,7 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
-      - 5432
+      - 5432:5432
     volumes:
       - keycloak_data:/var/lib/postgresql/data
     networks:
@@ -32,7 +32,7 @@ services:
       KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN}
       KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
     ports:
-      - 8080
+      - 10001:8080
     networks:
       - siberiana-network
     depends_on:
