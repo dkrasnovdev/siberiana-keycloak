@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  Сибириана | Агрегатор историко-культурного наследия Енисейской Сибири.
+Siberiana | Aggregator of the Historical and Cultural Heritage of the Yenisei Siberia.
 </p>
 
 # Siberiana Keycloak Setup
