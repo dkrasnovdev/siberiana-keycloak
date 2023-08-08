@@ -9,7 +9,6 @@
   Сибириана | Агрегатор историко-культурного наследия Енисейской Сибири.
 </p>
 
-````markdown
 # Siberiana Keycloak Setup
 
 This repository contains configuration files and instructions for setting up a Keycloak instance along with a PostgreSQL database using Docker Compose.
@@ -28,8 +27,8 @@ Before you begin, ensure you have the following installed:
    ```bash
    git clone https://github.com/dkrasnovdev/siberiana-keycloak.git
    cd siberiana-keycloak
+
    ```
-````
 
 2. Copy the `.env.example` file and rename it to `.env`. Fill in the required environment variables with appropriate values.
 
@@ -76,3 +75,7 @@ You can customize the configuration files to suit your specific requirements. Re
 ## Troubleshooting
 
 If you encounter any issues or have questions, please feel free to create an issue on this repository.
+
+```
+
+```
