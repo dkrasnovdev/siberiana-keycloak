@@ -63,6 +63,7 @@ Before you begin, ensure you have the following installed:
 
 ## Files
 
+- `docker/Dockerfile`: Dockerfile for building the Keycloak service container.
 - `docker-compose.yml`: Docker Compose configuration for Keycloak and PostgreSQL services.
 - `.env.example`: Example environment variables file. Create a `.env` file based on this template.
 - `keycloak/keycloak.conf`: Keycloak configuration settings.
