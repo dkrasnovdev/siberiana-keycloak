@@ -75,7 +75,3 @@ You can customize the configuration files to suit your specific requirements. Re
 ## Troubleshooting
 
 If you encounter any issues or have questions, please feel free to create an issue on this repository.
-
-```
-
-```
