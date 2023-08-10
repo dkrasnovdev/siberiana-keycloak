@@ -1,6 +1,6 @@
 services:
-  keycloak_postgres:
-    container_name: keycloak_postgres
+  siberiana_keycloak_postgres:
+    container_name: siberiana_keycloak_postgres
     image: postgres:latest
     restart: unless-stopped
     healthcheck:
@@ -15,18 +15,18 @@ services:
     ports:
       - 15432:5432
     volumes:
-      - keycloak_data:/var/lib/postgresql/data
+      - siberiana_keycloak_data:/var/lib/postgresql/data
     networks:
       - siberiana-network
 
-  keycloak_service:
-    container_name: keycloak_service
+  siberiana_keycloak_service:
+    container_name: siberiana_keycloak_service
     build:
       context: .
       dockerfile: ./docker/Dockerfile
     restart: unless-stopped
     environment:
-      KC_DB_URL: jdbc:postgresql://keycloak_postgres:5432/keycloak
+      KC_DB_URL: jdbc:postgresql://siberiana_keycloak_postgres:5432/keycloak
       KC_DB_USERNAME: ${KC_DB_USERNAME}
       KC_DB_PASSWORD: ${KC_DB_PASSWORD}
       KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN}
@@ -36,10 +36,10 @@ services:
     networks:
       - siberiana-network
     depends_on:
-      - keycloak_postgres
+      - siberiana_keycloak_postgres
 
 volumes:
-  keycloak_data:
+  siberiana_keycloak_data:
     external: true
 
 networks:
